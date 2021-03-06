@@ -1,0 +1,3 @@
+1,Barfi,Hindi,Emotional,23/04/12,Ranbir:Priyanka,4.5,120
+2,Avengers,English,Scifi,20/09/15,Chris:Mark,4.9,300
+3,Three Idiots,Hindi,Adventure,10/12/19,Amir:Javed,4.5,200

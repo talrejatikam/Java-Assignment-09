@@ -1,0 +1,10 @@
+create table Movie (
+	movieId int primary key,
+	movieName varchar(255),
+	category varchar(255),
+	language varchar(255),
+	releaseDate date,
+	casting varchar(255),
+	rating decimal(10,2),
+	totalBusinessDone decimal(10,2)
+	);
