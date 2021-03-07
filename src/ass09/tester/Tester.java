@@ -1,9 +1,11 @@
 package ass09.tester;
 
 import java.io.*;
+import java.sql.SQLException;
 import java.util.*;
 
 import ass09.beans.Movie;
+import ass09.database.*;
 import ass09.utils.Utils;
 
 public class Tester {
@@ -27,11 +29,15 @@ public class Tester {
 	}
 	
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, ClassNotFoundException, SQLException {
 		List<Movie> movies = new ArrayList<Movie>();
-		movies =  Tester.readMovieData("Movies.txt");
-		for (Movie movie : movies) {
+		DatabaseServices databaseServices = new DatabaseServices();
+	 	movies = readMovieData("Movies.txt");
+	 	
+	 	for (Movie movie : movies) {
 			System.out.println(movie.toString());
 		}
+databaseServices.allMovieInDb(movies);
+//		System.out.println("all set");
 	}
 }

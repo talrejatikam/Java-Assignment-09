@@ -60,7 +60,7 @@ public class Movie implements Serializable{
 		
 		Language language = Language.ENGLISH;
 		for(Language lang:Language.values()){
-			if(lang.toString() == contents[2]) {
+			if(lang.toString() == contents[3]) {
 				language = lang;
 				break;
 			}
@@ -68,7 +68,7 @@ public class Movie implements Serializable{
 		
 		Category movieType = Category.ADVENTURE;
 		for(Category cat: Category.values()) {
-			if(cat.toString() == contents[3]) {
+			if(cat.toString() == contents[2]) {
 				movieType = cat;
 				break;
 			}
