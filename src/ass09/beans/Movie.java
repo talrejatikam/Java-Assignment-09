@@ -12,6 +12,7 @@ import ass09.enums.Language;
 
 public class Movie implements Serializable{
 	
+	private static final long serialVersionUID = 1L;
 	private int movieId;
 	private String movieName;
 	private Category movieType;
@@ -45,14 +46,13 @@ public class Movie implements Serializable{
 	
 	@Override
 	public String toString() {
-		return "Movie [movieId=" + movieId + ", movieName=" + movieName + ", movieType=" + movieType + ", language="
-				+ language + ", releaseDate=" + releaseDate + ", casting=" + casting + ", rating=" + rating
-				+ ", totalBusinessDone=" + totalBusinessDone + "]";
+		return "======Movie Details ======\nId : " + movieId + "\nmovieName : " + movieName + ", movieType : " + movieType + "\nlanguage : "
+				+ language + ", releaseDate : " + releaseDate + "\ncasting : " + casting + "\nrating : " + rating
+				+ "\ntotalBusinessDone : " + totalBusinessDone + "\n\n\n";
 	}
 
 
 	public static Movie convStrToMovie(String str) {
-		Object[] objArr = new Object[8];
 		String contents[] =  Pattern.compile(",").split(str);
 		int movieID = Integer.valueOf(contents[0]);
 		

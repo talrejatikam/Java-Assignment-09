@@ -12,7 +12,6 @@ import ass09.enums.Language;
 
 public class Utils {
 	public static Movie convStrToMovie(String str) {
-		Object[] objArr = new Object[8];
 		String contents[] =  Pattern.compile(",").split(str);
 		int movieID = Integer.valueOf(contents[0]);
 		
